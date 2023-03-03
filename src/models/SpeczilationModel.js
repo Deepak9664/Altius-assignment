@@ -1,17 +1,16 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const ObjectId = mongoose.Schema.Types.ObjectId
 
 const SpecilisationSchema = new mongoose.Schema(
     {
         
-        name: { type: String, required: true ,trim:true},
-        age: { type: Number, required: true },
-        location:{type:String,required:true},
-        About:{type:String},
-        Qualification:{type:String,required:true},
-        specilisation:{type:[String]},
-        experience:{type:Number,required:true},
-        isDeleted: { type: Boolean, default: false },
-        Designation:{type:String}
+        Specialties: { type: String, required: true ,trim:true},
+        DocId:{
+            type: ObjectId,
+            ref: "Doctor",
+            required: true
+        },
+        
     }, { timestamps: true }
 )
 

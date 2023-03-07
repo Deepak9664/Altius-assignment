@@ -7,7 +7,7 @@ const DocController = require('../controller/Doctor')
 router.post('/Doctor',DocController.createDoc)
 router.get('/Doctor',DocController.getallDoctors)
 
-router.post('/specilities',DocController.createspecialities)
+router.post('/specilitiess',DocController.createspecialities)
 router.get('/specilities',DocController.getspecialisation)
 
 
